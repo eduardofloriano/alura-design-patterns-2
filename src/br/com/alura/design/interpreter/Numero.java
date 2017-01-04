@@ -1,5 +1,7 @@
 package br.com.alura.design.interpreter;
 
+import br.com.alura.design.visitor.ImpressoraVisitor;
+
 public class Numero implements Expressao {
 
 	
@@ -12,5 +14,18 @@ public class Numero implements Expressao {
 	public int avalia() {
 		return numero;
 	}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	@Override
+	public void aceita(ImpressoraVisitor visitor) {
+		visitor.visitaNumero(this);
+		
+	}
+	
+	
 
 }

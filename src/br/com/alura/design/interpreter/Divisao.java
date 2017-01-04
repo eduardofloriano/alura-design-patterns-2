@@ -2,12 +2,12 @@ package br.com.alura.design.interpreter;
 
 import br.com.alura.design.visitor.ImpressoraVisitor;
 
-public class Subtracao implements Expressao{
+public class Divisao implements Expressao {
 	
-	public Expressao esquerda;
-	public Expressao direita;
+	private Expressao esquerda;
+	private Expressao direita;
 
-	public Subtracao(Expressao esquerda, Expressao direita){
+	public Divisao(Expressao esquerda, Expressao direita){
 		this.esquerda = esquerda;
 		this.direita = direita;
 	}
@@ -17,14 +17,13 @@ public class Subtracao implements Expressao{
 		
 		int valorEsquerda = esquerda.avalia();
 		int valorDireita = direita.avalia();
-		return valorEsquerda - valorDireita;
+		return valorEsquerda / valorDireita;
 	}
 
 	@Override
 	public void aceita(ImpressoraVisitor visitor) {
-		visitor.visitaSubtracao(this);
+		// TODO Auto-generated method stub
 		
 	}
 
-	
 }
