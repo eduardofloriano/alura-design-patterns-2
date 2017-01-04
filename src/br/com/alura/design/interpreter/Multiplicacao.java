@@ -1,6 +1,7 @@
 package br.com.alura.design.interpreter;
 
 import br.com.alura.design.visitor.ImpressoraVisitor;
+import br.com.alura.design.visitor.Visitor;
 
 public class Multiplicacao implements Expressao {
 
@@ -20,8 +21,9 @@ public class Multiplicacao implements Expressao {
 		return valorEsquerda * valorDireita;
 	}
 
+	
 	@Override
-	public void aceita(ImpressoraVisitor visitor) {
+	public void aceita(Visitor visitor) {
 		// TODO Auto-generated method stub
 		
 	}

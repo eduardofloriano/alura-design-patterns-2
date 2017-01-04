@@ -4,7 +4,7 @@ import br.com.alura.design.interpreter.Numero;
 import br.com.alura.design.interpreter.Soma;
 import br.com.alura.design.interpreter.Subtracao;
 
-public class ImpressoraVisitor {
+public class ImpressoraVisitor implements Visitor{
 
 	
 	public void visitaSoma( Soma soma ){

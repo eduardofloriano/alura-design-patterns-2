@@ -1,6 +1,6 @@
 package br.com.alura.design.interpreter;
 
-import br.com.alura.design.visitor.ImpressoraVisitor;
+import br.com.alura.design.visitor.Visitor;
 
 public class Divisao implements Expressao {
 	
@@ -21,7 +21,7 @@ public class Divisao implements Expressao {
 	}
 
 	@Override
-	public void aceita(ImpressoraVisitor visitor) {
+	public void aceita(Visitor visitor) {
 		// TODO Auto-generated method stub
 		
 	}

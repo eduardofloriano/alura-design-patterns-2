@@ -1,6 +1,6 @@
 package br.com.alura.design.interpreter;
 
-import br.com.alura.design.visitor.ImpressoraVisitor;
+import br.com.alura.design.visitor.Visitor;
 
 public class Soma implements Expressao {
 
@@ -9,7 +9,7 @@ public class Soma implements Expressao {
 	public Expressao esquerda;
 	public Expressao direita;
 	
-	private ImpressoraVisitor ImpressoraVisitor;
+	private Visitor ImpressoraVisitor;
 	
 
 	public Soma(Expressao esquerda, Expressao direita){
@@ -28,7 +28,7 @@ public class Soma implements Expressao {
 	
 	
 	@Override
-	public void aceita(ImpressoraVisitor visitor) {
+	public void aceita(Visitor visitor) {
 		visitor.visitaSoma(this);		
 	}
 
